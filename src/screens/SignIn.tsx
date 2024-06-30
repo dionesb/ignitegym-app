@@ -1,8 +1,11 @@
-import { VStack, Image, Text, Center } from "native-base";
+import { VStack, Image, Text, Center, Heading } from "native-base";
 
 // Assets
 import LogoSvg from "@assets/logo.svg";
 import BackgroundImg from "@assets/background.png";
+
+// Components
+import Input from "@components/Input";
 
 const SignIn = () => {
     return (
@@ -18,6 +21,13 @@ const SignIn = () => {
                 <Text color="gray.100" fontSize="sm">
                     Treine sua mente e seu corpo
                 </Text>
+            </Center>
+            <Center>
+                <Heading color="gray.100" fontSize="xl" mb={6} fontFamily="heading">
+                    Acesse sua conta
+                </Heading>
+                <Input placeholder="E-mail" />
+                <Input placeholder="Senha" />
             </Center>
         </VStack>
     );
