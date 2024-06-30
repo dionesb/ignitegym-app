@@ -6,6 +6,12 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 
+// Theme
+import { THEME } from "src/theme";
+
+// Components
+import Loading from "@components/Loading";
+
 export default function App() {
   const fontsLoaded = useFonts({
     Roboto_400Regular,
@@ -13,13 +19,13 @@ export default function App() {
   });
 
   return (
-    <NativeBaseProvider >
+    <NativeBaseProvider theme={THEME}>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Text>Hello World!</Text> : <View />}
+      {fontsLoaded ? <Text>Hello World!</Text> : <Loading />}
     </NativeBaseProvider>
   );
 }
