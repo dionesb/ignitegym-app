@@ -16,7 +16,7 @@ import BackgroundImg from "@assets/background.png";
 import Input from "@components/Input";
 import Button from "@components/Button";
 
-const SignIn = () => {
+const SignUp = () => {
     return (
         <ScrollView
             bg="gray.700"
@@ -39,25 +39,23 @@ const SignIn = () => {
                 </Center>
                 <Center>
                     <Heading color="gray.100" fontSize="xl" mb={6} fontFamily="heading">
-                        Acesse sua conta
+                        Crie sua conta
                     </Heading>
+                    <Input placeholder="Nome" />
                     <Input
                         placeholder="E-mail"
                         keyboardType="email-address"
                         autoCapitalize="none"
                     />
                     <Input placeholder="Senha" secureTextEntry />
-                    <Button title="Acessar" />
+                    <Button title="Criar sua conta" />
                 </Center>
                 <Center mt={24}>
-                    <Text color="gray.100" fontSize="sm" mb={3} fontFamily="body">
-                        Ainda não tem acesso?
-                    </Text>
-                    <Button title="Criar conta" variant="outline" />
+                    <Button title="Voltar para o login" variant="outline" />
                 </Center>
             </VStack>
         </ScrollView>
     );
 };
 
-export default SignIn;
+export default SignUp;
