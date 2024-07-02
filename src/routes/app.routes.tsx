@@ -1,4 +1,4 @@
-import { createNativeStackNavigator, NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 // Screens
 import Home from "@screens/Home";
@@ -13,9 +13,9 @@ type AppRoutes = {
     exercise: undefined;
 }
 
-export type AppNavigationRoutesProps = NativeStackNavigationProp<AppRoutes>;
+export type AppNavigationRoutesProps = BottomTabNavigationProp<AppRoutes>;
 
-const { Navigator, Screen } = createNativeStackNavigator<AppRoutes>();
+const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
 
 export const AppRoutes = () => {
     return (
