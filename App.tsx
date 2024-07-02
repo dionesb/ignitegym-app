@@ -16,7 +16,7 @@ import { Routes } from "@routes/index";
 import Loading from "@components/Loading";
 
 export default function App() {
-  const fontsLoaded = useFonts({
+  const [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_700Bold,
   });
