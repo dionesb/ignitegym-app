@@ -19,7 +19,6 @@ import Button from "@components/Button";
 const SignUp = () => {
     return (
         <ScrollView
-            bg="gray.700"
             contentContainerStyle={{ flexGrow: 1 }}
             showsVerticalScrollIndicator={false}
         >
