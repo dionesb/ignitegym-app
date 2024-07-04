@@ -24,9 +24,9 @@ const History = () => {
             <SectionList
                 sections={exercicios}
                 keyExtractor={item => item}
-                renderItem={({ item }) => (
+                renderItem={({ item }) =>
                     <HistoryCard />
-                )}
+                }
                 renderSectionHeader={({ section }) => (
                     <Heading color="gray.200" fontSize="md" mt={10} mb={3}>
                         {section.title}
@@ -40,6 +40,7 @@ const History = () => {
                         Vamos começar hoje?
                     </Text>
                 )}
+                showsVerticalScrollIndicator={false}
             />
         </VStack>
     );
