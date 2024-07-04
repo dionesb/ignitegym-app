@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 import { FlatList, HStack, Heading, VStack, Text } from "native-base";
+
+// Routes
+import { AppNavigationRoutesProps } from "@routes/app.routes";
 
 // Components
 import Group from "@components/Group";
@@ -10,6 +14,12 @@ const Home = () => {
     const [groups, setGroups] = useState(["costas", "ombro", "peito", "bíceps"]);
     const [exercises, setExercises] = useState(["Puxada frontal", "Remada curvada", "Remada unilateral", "Levantamento terra"]);
     const [groupSelected, setgroupSelected] = useState("costas");
+
+    const navigation = useNavigation<AppNavigationRoutesProps>();
+
+    const handleOpenExerciseDetails = () => {
+        navigation.navigate("exercise");
+    };
 
     return (
         <VStack flex={1}>
@@ -42,7 +52,7 @@ const Home = () => {
                 <FlatList
                     data={exercises}
                     keyExtractor={item => item}
-                    renderItem={({ item }) => <ExerciseCard />}
+                    renderItem={({ item }) => <ExerciseCard onPress={handleOpenExerciseDetails} />}
                     showsVerticalScrollIndicator={false}
                     _contentContainerStyle={{ paddingBottom: 20 }}
                 />
